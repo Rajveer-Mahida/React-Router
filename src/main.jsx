@@ -7,6 +7,7 @@ import Home from "./Home/Home.jsx";
 import About from "./About/About.jsx";
 import Contact from "./Contact/Contact .jsx";
 import User from "./User/User.jsx";
+import Error from "./Error/Error.jsx";
 
 // Methode 1 To Create Router
 // const router = createBrowserRouter([
@@ -32,9 +33,9 @@ import User from "./User/User.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout />}>
-      <Route path='' element={<Home />} />
-      <Route path='/about' element={<About />} />
+    <Route path='/' element={<Layout />  } errorElement={<Error/>} >
+      <Route path='' element={<Home />} />,
+      <Route path='/about' element={<About />}   />
       <Route path='/contact' element={<Contact />} />
       <Route path='/user/:username' element={<User />} />
     </Route>
